@@ -1,0 +1,48 @@
+package testConversation;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	static Scanner sc= new Scanner(System.in);	
+	 static boolean kpg = true;
+
+	public static void main(String[] args) {
+		
+	sayHi();
+		
+	}
+	
+	
+	public static void sayHi() {
+		
+		int bet = 0;
+		
+		
+		do {
+		System.out.println("place your bet:");
+		
+		//String Text = sc.nextLine();
+		bet = sc.nextInt();
+		
+		if(bet > 0) {
+	
+		System.out.println( "You're be is " + bet + " is that correct? Y or N");
+		
+		String answer = sc.next();
+		
+		if(answer.equalsIgnoreCase("Y")) {
+			
+		}
+		
+		
+	}else {
+		System.out.println("have a good day play again soon!");
+		
+		
+	}
+	
+	
+}while(kpg);
+	}
+}

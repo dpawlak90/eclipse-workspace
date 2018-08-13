@@ -1,0 +1,12 @@
+package testMethods;
+
+
+public class testMethods{
+	
+public main(String[] args) {
+	
+System.out.println("test");
+
+}
+
+}

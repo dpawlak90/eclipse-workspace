@@ -1,0 +1,41 @@
+
+
+package testMethods;
+
+import java.util.Scanner;
+
+public class GuessingGame{
+	
+	static Scanner sc = new Scanner(System.in);
+	static boolean keepPlaying = true;
+	
+public static void main(String[] args) {
+	
+	while(keepPlaying) {
+		
+		System.out.println("Let's play a guessing game!");
+		
+		playARound();
+	
+	}
+
+}
+
+public static void playARound() {
+	boolean validInput;
+	int number, guess;
+	String answer;
+	
+	//pick a random number 
+	
+	number = (int) (Math.random() * 10) + 1;
+	
+	System.out.println("what do you think it is? ");
+	
+	do {
+		guess = sc.nextInt();
+	}while(!validInput);
+	
+}
+
+}

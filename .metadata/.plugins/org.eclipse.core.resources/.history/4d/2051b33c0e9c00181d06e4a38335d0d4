@@ -1,0 +1,34 @@
+package returnMethod;
+
+import java.util.Scanner;
+
+
+public class Main {
+	
+	static Scanner sc = new Scanner(System.in);
+	public static  void main (String[] args) {
+		
+		System.out.print("Let's play a game!");
+		
+		do {
+			playARound();
+		}while(askForAnotherRound);
+		
+	}
+	
+	public static void playARound() {
+		
+		boolean validInput;
+		int number, guess;
+		String answer;
+		
+		//pick a number 
+		number = getrandomNumber();
+		
+		//get the guess 
+		
+	}
+	
+	
+
+}

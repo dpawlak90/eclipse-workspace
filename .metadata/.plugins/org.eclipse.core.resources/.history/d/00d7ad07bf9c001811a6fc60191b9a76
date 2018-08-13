@@ -1,0 +1,36 @@
+package testConversation;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	static Scanner sc= new Scanner(System.in);
+	 static boolean kpg = true;
+
+	public static void main(String[] args) {
+		
+	sayHi();
+		
+	}
+	
+	
+	public static void sayHi() {
+		
+		do {
+		System.out.println("enter user name");
+		
+		String Text = sc.nextLine();
+		
+		if(Text.equals("dpawlak")) {
+	
+		System.out.println(Text + " that is the correct user name ");
+	}else {
+		System.out.println("user name is wrong");
+		
+		System.out.println(Text.getClass().getName());
+	}
+	
+	
+}while(kpg);
+	}
+}

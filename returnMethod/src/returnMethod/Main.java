@@ -1,0 +1,82 @@
+package returnMethod;
+
+import java.util.Scanner;
+
+
+public class Main {
+	
+	static Scanner sc = new Scanner(System.in);
+	public static  void main (String[] args) {
+		
+		System.out.print("Let's play a game!");
+		
+		do {
+			playARound();
+		}while(askForAnotherRound());
+		
+	}
+	
+	public static void playARound() {
+		
+		boolean validInput;
+		int number, guess;
+		String answer;
+		
+		//pick a number 
+		number = getRandomNumber();
+		
+		//get the guess 
+		
+		System.out.println("\nI'm thinking of a number between 1 and 10.");
+		
+		System.out.println("What do you think it is?");
+		
+		guess = getGuess();
+		
+		if (guess == number) {
+			System.out.println("you're right");
+		}else {
+			System.out.println("You're wrong! the number was" + number);
+		}
+		
+	}
+	
+	public static int getRandomNumber() {
+		return (int) (Math.random()* 10 + 1);
+	}
+	
+	public static int getGuess() {
+		while (true) 
+		{
+			int guess = sc.nextInt();
+			
+			if ((guess < 1) || (guess > 10)) {
+				
+				System.out.print("I said between 1 and 10 try again ");
+				
+			}else {
+				return guess;
+			}
+			
+		}
+		
+	}
+	
+	public static boolean askForAnotherRound() {
+		
+		while(true) {
+			String answer;
+			System.out.println("\nPlay again? (Y or N)");
+			answer = sc.next();
+			
+			if(answer.equalsIgnoreCase("Y")) {
+				return true;
+			}else if (answer.equalsIgnoreCase("N")) {
+				return false;
+			}
+		}
+		
+	}
+	
+
+}
